@@ -1,0 +1,72 @@
+.card_wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+}
+
+.card{
+    width: 60%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+h6{
+    font-size: .9rem;
+    color: #40689B;
+}
+
+
+.img_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_image{
+    width: 70%;
+    height: 70%;
+}
+
+.beneficiaries{
+
+    width: 35%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+
+.span{
+
+    font-size: .5rem;
+    padding: 2rem 0rem; 
+
+}
+
+.account{
+    padding: 1rem;
+    box-shadow: 1px 1px 2px 1px rgb(150, 148, 148);
+    border-radius: 5px;
+    margin-bottom: .8rem;
+    cursor: pointer;
+}
+
+.bank_name{
+    font-size: 1rem;
+    color:#40689B;
+}
+
+.number{
+    font-size: .8rem;
+    font-weight: lighter;
+}
+
+.link{
+    color: rgb(255, 174, 0);
+    font-size: .8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

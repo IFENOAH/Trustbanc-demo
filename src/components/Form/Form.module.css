@@ -1,0 +1,90 @@
+.form_wrapper{
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://assets.kpmg/content/dam/kpmgblogs/in/images/post/2020/07/how-covid-19-accelerating-digitalisation-banking-payments-industry.jpg/jcr:content/renditions/original');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    height: 70%;
+    display: flex;
+}
+
+.left_side{
+
+    background-color:#003679;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_page{
+    background: #fff;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading{
+    font-size: 2rem;
+}
+
+input{
+    width: 80%;
+    padding: 1rem;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.button2{
+    width: 80%;
+    color: #fff;
+    font-size: 1rem;
+    padding: .8rem;
+    border-radius: 5px;
+    border: none;
+    background-color:#40689B
+}
+
+.button1{
+    width: 80%;
+    color: rgb(50, 50, 150);
+    font-size: 1rem;
+    padding: .8rem;
+    border-radius: 5px;
+    border: none;
+    background-color:#fff
+}
+
+.text{
+    color: #fff;
+    margin: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

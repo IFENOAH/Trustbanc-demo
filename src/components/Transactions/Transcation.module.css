@@ -1,0 +1,41 @@
+.transaction_wrapper{
+    width: 60%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.title{
+    font-size: .9rem;
+    color: #40689B;
+}
+
+.link{
+    color: rgb(255, 174, 0);
+    font-size: .8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.histories{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.history{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px rgb(155, 155, 155);
+    padding: .5rem;
+    border-radius: 5px;
+}
