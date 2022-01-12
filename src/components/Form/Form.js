@@ -1,29 +1,64 @@
 import React, { useState } from 'react'
 import styles from './Form.module.css'
+import axios from 'axios'
 
 function Form() {
 
-    const [state, setState] = useState({
+    const [number, setNumber] = useState("")
 
-        userName : "",
-        password : ""
-    })
+    const [password, setPassword] = useState("")
 
 
     const handleChange = (e) => {
 
+        setNumber(e.target.value)
+    }
+
+    const handlePassword = (e) => {
+
+        setPassword(e.target.value)
+    }
+
+    // const base_url = "/api/Authentication/LoginUser"
+
+
+    // async function handleSubmit(input) {
+
+    //     e.preventDefault();
+
+    //     const res = await fetch('https://api/Authentication/LoginUser', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(input)
+    //     })
+    //     .then(data => data.json());
+    //     if (res == 200) {
+    //         console.log("success") 
+    //     } else {
+    //         console.log ("wrong credentials")
+    //     }
+    // }
+
+    const handleSubmit = e => {
+
         e.preventDefault();
-        setState({
-            ...state,
-            [e.target.name]: e.target.value,
+
+        const postData = {
+          number,
+          password
+        };
+
+        axios.post(`https://bespoke.trustbancgroup.com/omnichannel_interview/api/Account/FetchAccounts`, postData,)
+        .then( response => {
+            console.log(response)
         })
-
-        console.log(state)
+        .catch(error => {
+            console.log(error)
+        })
     }
 
-    const handleSubmit = () =>{
-
-    }
 
 
     return (
@@ -38,26 +73,29 @@ function Form() {
                 </div>
 
                 <div className = {styles.form_page}>
-                    <form className = {styles.form}>
+                    <form className = {styles.form} onSubmit = { handleSubmit }>
                         <h2 className = {styles.heading}> Log in to your account</h2>
 
                         <input 
                             type = " text " 
-                            placeholder = "Username" 
+                            placeholder = "number" 
                             onChange = { handleChange }  
-                            value = { state.userName } 
-                            name="userName"
+                            value = { number } 
+                            name="number"
                         />
 
                         <input 
                             type = "password" 
                             placeholder = "password" 
-                            onChange = { handleChange }  
-                            value = { state.password } 
+                            onChange = { handlePassword }  
+                            value = { password } 
                             name="password"
                         />
 
-                        <button className = { styles.button2 } onSubmit = { handleSubmit }>LOGIN</button>
+                        <button 
+                            className = { styles.button2 }
+                            type = "submit" >LOGIN
+                        </button>
 
                     </form>
 
